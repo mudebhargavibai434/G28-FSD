@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ride Advertise</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f3f4f6;
+      color: #333;
+    }
+
+    .site-header {
+      background-color: #2e3a59;
+      padding: 1rem;
+      text-align: center;
+      color: white;
+    }
+
+    .site-title {
+      font-size: 28px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    nav {
+      background: #788aa3;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      padding: 1rem 1.5rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background: #5a6e8a;
+    }
+
+    .hero {
+      background: #cfd8dc;
+      padding: 2rem;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: #2f3e46;
+    }
+
+    .car-listings {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .car-card {
+      background: #ffffff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .car-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .car-card h3 {
+      margin: 0.5rem 0;
+      color: #2e7d32;
+    }
+
+    .car-card p {
+      margin: 0.25rem 0;
+      color: #37474f;
+    }
+
+    .car-card button {
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: #1b1f3b;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .car-card button:hover {
+      background: #3f4e8c;
+    }
+
+    .photo-gallery {
+      padding: 2rem;
+      text-align: center;
+      background-color: #dfe6e9;
+      border-radius: 4px;
+      margin: 2rem;
+    }
+
+    .photo-gallery h2 {
+      font-size: 28px;
+      margin-bottom: 1rem;
+      color: #222;
+    }
+
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .gallery-container img {
+      width: 250px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-container img:hover {
+      transform: scale(1.05);
+    }
+    #contact {
+  padding: 2rem;
+}
+
+#contact h2 {
+  text-align: center;
+  color: #2e3a59;
+  font-size: 28px;
+  margin-bottom: 1rem;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  background-color: #2e3a59;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #3f4e8c;
+}
+
+.center {
+  text-align: center;
+}
+
+    footer {
+      background: #455a64;
+      color: #eceff1;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    footer .links {
+      margin-top: 1rem;
+      font-size: 14px;
+    }
+
+    footer .links a {
+      color: #cfd8dc;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer .links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <h1 class="site-title">Ride Advertise</h1>
+  </header>
+
+  <nav>
+    <a href="Home">Home</a>
+    <a href="View Adds">View Adds</a>
+    <a href="Create Add">Create Add</a>
+    <a href="Gallery">Gallery</a>
+    <a href="Contact">Contact</a>
+  </nav>
+
+  <div class="hero">
+    Welcome To Ride Advertise
+  </div>
+
+  <section class="car-listings">
+    <div class="car-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLDbSAd0XLabdMjuI6QIWvxlPndbs_mrhrSw&s" alt="Tata Punch">
+      <h3>Tata Punch</h3>
+      <p><strong>Brand:</strong> Tata</p>
+      <p><strong>Model:</strong> 2010</p>
+      <p><strong>Type:</strong> Manual</p>
+      <p><strong>Price:</strong> ₹120000</p>
+      <p><strong>Location:</strong> Lucknow, Uttar Pradesh</p>
+      <button>Know More</button>
+    </div>
+
+    <div class="car-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSic2fnLVy8ARLH3IIS29MCrVJxhhJ7HF8rcw&s" alt="Mahindra SUV">
+      <h3>Mahindra SUV</h3>
+      <p><strong>Brand:</strong> Mahindra</p>
+      <p><strong>Model:</strong> 2022</p>
+      <p><strong>Type:</strong> Automatic</p>
+      <p><strong>Price:</strong> ₹200000</p>
+      <p><strong>Location:</strong> Nashik, Maharashtra</p>
+      <button>Know More</button>
+    </div>
+
+    <div class="car-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrRKGWouZunDyVXgZBkVCLwTJjKpytEz0DwQ&s" alt="Swift Dzire">
+      <h3>Swift Dzire</h3>
+      <p><strong>Brand:</strong> Suzuki</p>
+      <p><strong>Model:</strong> 2021</p>
+      <p><strong>Type:</strong> Manual</p>
+      <p><strong>Price:</strong> ₹2000000</p>
+      <p><strong>Location:</strong> Lucknow, Uttar Pradesh</p>
+      <button>Know More</button>
+    </div>
+
+    <div class="car-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4wQA1I2OJXYzghEKU2d_Kvw6IgA5EX5PAqQ&s" alt="Suzuki Sports Car">
+      <h3>Suzuki Sports Car</h3>
+      <p><strong>Brand:</strong> Suzuki</p>
+      <p><strong>Model:</strong> 2023</p>
+      <p><strong>Type:</strong> Automatic</p>
+      <p><strong>Price:</strong> ₹1200000</p>
+      <p><strong>Location:</strong> Mumbai, Maharashtra</p>
+      <button>Know More</button>
+    </div>
+  </section>
+
+  <section class="photo-gallery">
+    <h2>Photo Gallery</h2>
+    <div class="gallery-container">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4wQA1I2OJXYzghEKU2d_Kvw6IgA5EX5PAqQ&s" alt="Suzuki Sports Car">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrRKGWouZunDyVXgZBkVCLwTJjKpytEz0DwQ&s" alt="Swift Dzire">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSic2fnLVy8ARLH3IIS29MCrVJxhhJ7HF8rcw&s" alt="Mahindra SUV">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLDbSAd0XLabdMjuI6QIWvxlPndbs_mrhrSw&s" alt="Tata Punch">
+    </div>
+  </section>
+  
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="mobile">Mobile:</label>
+        <input type="tel" id="mobile" placeholder="Enter your mobile number" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email address" required>
+      </div>
+
+      <div class="form-group">
+        <label for="query">Your Query:</label>
+        <textarea id="query" rows="5" placeholder="Enter your message" required></textarea>
+      </div>
+
+      <div class="form-group center">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2003 Ride Advertise. All rights reserved</p>
+    <div class="links">
+      <p><strong>Company:</strong>
+        <a href="About Us">About Us</a> |
+        <a href="Blog">Blog</a> |
+        <a href="Contact Us">Contact Us</a> |
+        <a href="Pricing">Pricing</a> |
+        <a href="Testimonials">Testimonials</a>
+      </p>
+      <p><strong>Support:</strong>
+        <a href="Help Center">Help Center</a> |
+        <a href="Terms of Service">Terms of Service</a> |
+        <a href="Privacy">Privacy</a> |
+        <a href="Legal">Legal</a> |
+        <a href="Status">Status</a>
+      </p>
+    </div>
+  </footer>
+
+
+</body>
+</html>
